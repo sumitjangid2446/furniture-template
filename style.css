@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+}
+
+
+.hero-image {
+  background-image: url('banner-bg.png'); 
+  background-size: cover;
+  /* background-position: center; */
+  height: 100vh;
+  filter: brightness(90%);
+  background-attachment: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='coral' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar {
+  background-color: rgba(116, 114, 114, 0.2);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+
+.navbar-toggler {
+  border: 1px solid rgba(98, 81, 0, 0.87);
+}
+
+.navbar-nav .nav-link {
+  color: rgb(7, 0, 0);
+  font-weight: bold;
+  font-family:'Times New Roman', Times, serif;
+  /* font-family: r; */
+  font-size: 1.6rem;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #f06f05;
+  transition: width 0.4s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f06f05;
+  /* text-shadow: 0 0 3px #f06f05, 0 0 12px #f06f05; */
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Secodr Section start */
+.image img{
+  height: 100px;
+  display: block;
+  margin-top: 6%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+} 
+.image img:hover{
+  color: #f0c131;
+} 
+ .col-lg-4:hover{
+  transition: 0.3s ease;
+  border-bottom: 2px solid #e08506;  
+ }                
+.image h5{
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: justify;
+  transition: 0.4s ease;
+}
+.image:hover{
+  
+  color: #e08506  ;  
+} 
+.btn{
+  background-color:  #ffc107;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  /* justify-content:center; */
+  text-align: center;
+  margin-top: 14%;
+  margin: 0 auto;
+  display: block;
+}
+.btn:hover{
+  background-color: #333333;
+  color: white;
+
+}
+/* About  */
+.col-lg-6{
+  /* margin-top: 60px; */
+  background-color:#ffc107;;
+}
+.col-lg-6 img{
+  border-radius: 20px;
+  width: 410px;
+  margin-bottom: 10px;
+  height: 350px;
+   margin-top: 4%; 
+  filter: grayscale(210%);
+  transition: filter 0.8s;
+}
+
+.col-lg-6 img:hover{
+   /* box-shadow 0.3s ease; */
+   box-shadow: 0 6px 7px rgba(10, 6, 6, 0.2); 
+  /* box-shadow: rgba(0, 0, 0, 0.8); */
+  filter: grayscale(0%);
+}
+/* Product */
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.image-wrapper img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  filter: grayscale(50%);
+  transition: transform 0.5s ease;
+}
+.image-wrapper img:hover{
+  filter:grayscale(0%);
+}
+
+.furniture-card:hover .image-wrapper img {
+  transform: scale(1.1);
+}
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.overlay-text:hover{
+  color: #fd7e14;
+}
+.furniture-card:hover .overlay-text {
+  opacity: 1;
+}
+
+/* Flexbox for carousel items */
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.furniture-card {
+  flex: 1;
+  margin-right: 10px; /* Spacing between cards */
+}
+
+
+.carousel-item .d-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.furniture-card {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.furniture-card:last-child {
+  margin-right: 0;
+}
+
+/* For small screens (max-width: 768px), display only 2 products */
+@media (max-width: 768px) {
+  .carousel-item .d-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .furniture-card {
+    flex: 0 0 48%;  /* 2 products per row */
+    margin-right: 10px;
+  }
+
+  .furniture-card:last-child {
+    margin-right: 0;
+  }
+}
+
+
+
+/* Say Client */
+.card{
+  margin-top:4%;
+  /* background-color: #ffc107; */
+  transition: 0.4s ease-in-out;
+  border-radius: 10px;
+}
+.card:hover{
+  background-color: #ffc107;
+  /* color: #ffffff; */
+  /* background-color: rgb(255, 255, 255); */
+}
+.card {
+  border: 2px solid #f0c131;
+}
+/* .card img{} */
+.card p{
+  text-align: center;
+}
+.neon-btn {
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #111;
+  border: 2px solid #333333;
+  border-radius: 8px;
+  margin-left: 180px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  /* box-shadow: 0 0 5px #010a0a, 0 0 10px transparent; */
+}
+
+.neon-btn:hover {
+  color: #111;
+  background-color:#f0c131;
+  /* box-shadow: 0 0 15px #f06f05, 0 0 30px #fd7e14; */
+  transform: scale(1.05);
+}
+
+/* Contact */
+.col-md-6{
+  margin-top: 10%;
+  /* background-color: #ffc107; */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  /* gap: 6px; */
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: #ffc107;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color:#fd7e14;
+}
+/* Footer */
+
+footer {
+  margin-top: 6%;  
+  border-top: 4px solid #ffc107;
+  width: 100%;
+    color: #000;
+}
+.link i{
+  padding:6px;
+}
+.link i:hover{
+  color:#f06f05;
+
+}
+footer input[type="email"] {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 6px;
+  border-radius: 4px;
+  border:2px solid #333333;
+}
+footer button {
+  padding: 6px 12px;
+ transition: 0.3s ease-in-out;
+  color: #000;
+  border: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background-color: #f09a05;
+  border-radius: 4px;
+}
+footer button:hover{
+background-color:#ffc107;
+}
